@@ -1,0 +1,56 @@
+// src/components/Player/Player.scss
+@import "../../style/config";
+
+.Player {
+  display: block; // instead of list-item
+  background: rgba(255, 255, 255, 0.651);
+  position: relative;
+
+  p {
+    margin: 0;
+    padding: 0.3rem 0.7rem 0.7rem;
+  }
+
+  .percentage_coloring {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.4rem;
+    background: $primary; // fallback for if the browser does not support gradients
+    background: linear-gradient(
+      90deg,
+      rgba(0, 60, 255, 0.596),
+      rgb(13, 163, 13)
+    );
+    transition: all 0.2s ease;
+  }
+
+  &:hover .percentage_coloring {
+    transform: scale(1, 2);
+    background: linear-gradient(90deg, #fbff0098, #f20f0f);
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    font-family: inherit;
+    transition: all 0.2 s ease;
+    background: white;
+    border: 2px solid green;
+    border-radius: 8px;
+
+    // other styles
+    &:hover {
+      background: rgba(30, 211, 24, 0.521);
+    }
+    &:active {
+      box-shadow: 0 0 6px 6px yellow, 0 0 6px 6px yellow;
+    }
+    &:focus {
+      background: rgba(30, 211, 24, 0.521);
+    }
+  }
+}

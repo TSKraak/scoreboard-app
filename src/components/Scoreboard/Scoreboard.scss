@@ -1,0 +1,67 @@
+// src/components/Scoreboard/Scoreboard.scss
+.Scoreboard {
+  display: block; // instead of list-item
+  position: relative;
+
+  background: url(sports.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  h2 {
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+
+    text-shadow: 4px 4px 6px white;
+  }
+
+  div.sort_dropdown {
+    margin-left: 0.5rem;
+    text-shadow: 2px 2px 3px white;
+  }
+
+  p.sort_order {
+    display: inline;
+    position: relative;
+
+    select {
+      margin-bottom: 0.5rem;
+      font-family: inherit;
+      font-size: 0.7rem;
+      background: white;
+      border: 2px solid black;
+      border-radius: 8px;
+      transition: all 0.2 s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.61);
+      }
+      &:focus {
+        background: rgba(255, 255, 255, 0.61);
+      }
+    }
+  }
+
+  button.reset_score {
+    padding: 0.5rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    font-family: inherit;
+    transition: all 0.2 s ease;
+    background: white;
+    border: 2px solid red;
+    border-radius: 8px;
+
+    // other styles
+    &:hover {
+      background: rgba(168, 44, 44, 0.541);
+    }
+    &:active {
+      box-shadow: 0 0 6px 6px black, 0 0 6px 6px black;
+    }
+    &:focus {
+      background: rgba(168, 44, 44, 0.541);
+    }
+  }
+}
