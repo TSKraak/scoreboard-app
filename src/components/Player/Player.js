@@ -1,14 +1,61 @@
 import React from "react";
-import "./Player.css";
+import "./Player.scss";
 
-export default function Player({ id, name, score }) {
+export default function Player({
+  id,
+  name,
+  score,
+  incrementScore,
+  decrementScore,
+  resetScore,
+  removePlayer,
+}) {
+  const onClickIncrement = () => {
+    return incrementScore(id);
+  };
+
+  const onClickDecrement = () => {
+    return decrementScore(id);
+  };
+
+  const onClickReset = () => {
+    return resetScore(id);
+  };
+
+  const onClickRemove = () => {
+    return removePlayer(id);
+  };
+
   return (
     <div>
-      <li className="Player">
+      <div className="Player">
+        <div className="percentage_coloring" style={{ width: score + "%" }} />
         <p>
-          {name}, score: {score}
+          {name}, Score: {score}
+          <button className="increment" onClick={onClickIncrement}>
+            +
+          </button>
+          <button className="decrement" onClick={onClickDecrement}>
+            -
+          </button>
+          <button className="reset" onClick={onClickReset}>
+            Reset score
+          </button>
+          <button className="remove-player" onClick={onClickRemove}>
+            Remove player
+          </button>
         </p>
-      </li>
+      </div>
     </div>
   );
 }
+
+// <div>
+//   <li className="Player" key={id}>
+//     <div className="percentage_coloring" style={{ width: score + "%" }} />
+//     <p>
+//       {name}, Score: {score}
+//       <button onClick={onClickIncrement}>Score +1</button>
+//     </p>
+//   </li>
+// </div>;

@@ -1,10 +1,10 @@
 import React from "react";
-import "./Title.css";
+import "./Title.scss";
 
 export default function TItle() {
   return (
     <div className="Title">
-      <p>Title</p>
+      <h1>Scoreboard</h1>
     </div>
   );
 }

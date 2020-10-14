@@ -30,10 +30,11 @@
     background: linear-gradient(90deg, #fbff0098, #f20f0f);
   }
 
-  button {
+  button.increment {
     position: absolute;
+    width: 2rem;
     top: 0;
-    right: 0;
+    right: 11rem;
     bottom: 0;
 
     font-family: inherit;
@@ -52,5 +53,82 @@
     &:focus {
       background: rgba(30, 211, 24, 0.521);
     }
+  }
+}
+
+button.decrement {
+  position: absolute;
+  width: 2rem;
+  top: 0;
+  right: 9rem;
+  bottom: 0;
+
+  font-family: inherit;
+  transition: all 0.2 s ease;
+  background: white;
+  border: 2px solid red;
+  border-radius: 8px;
+
+  // other styles
+  &:hover {
+    background: rgba(168, 44, 44, 0.541);
+  }
+  &:active {
+    box-shadow: 0 0 6px 6px black, 0 0 6px 6px black;
+  }
+  &:focus {
+    background: rgba(168, 44, 44, 0.541);
+  }
+}
+
+button.reset {
+  position: absolute;
+  width: 4rem;
+  top: 0;
+  right: 5rem;
+  bottom: 0;
+
+  font-family: inherit;
+  font-size: 0.6rem;
+  transition: all 0.2 s ease;
+  background: white;
+  border: 2px solid red;
+  border-radius: 8px;
+
+  // other styles
+  &:hover {
+    background: rgba(168, 44, 44, 0.541);
+  }
+  &:active {
+    box-shadow: 0 0 6px 6px black, 0 0 6px 6px black;
+  }
+  &:focus {
+    background: rgba(168, 44, 44, 0.541);
+  }
+}
+
+button.remove-player {
+  position: absolute;
+  width: 5rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  font-family: inherit;
+  font-size: 0.6rem;
+  transition: all 0.2 s ease;
+  background: white;
+  border: 2px solid red;
+  border-radius: 8px;
+
+  // other styles
+  &:hover {
+    background: rgba(168, 44, 44, 0.541);
+  }
+  &:active {
+    box-shadow: 0 0 6px 6px black, 0 0 6px 6px black;
+  }
+  &:focus {
+    background: rgba(168, 44, 44, 0.541);
   }
 }
